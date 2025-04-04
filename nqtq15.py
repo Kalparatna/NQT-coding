@@ -65,7 +65,6 @@ num = int(input())
 
 converted = bin(num)
 binarystr = converted[2:]
-i = 2
 res = 0
 for i in binarystr:
     if i == '1':
@@ -74,8 +73,6 @@ for i in binarystr:
 print(res)
 
 # or Using  BriN kernighans algorithm 
-
-
 '''
 def count_set_bits(n):
     count = 0

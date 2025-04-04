@@ -38,6 +38,7 @@ n = int(input())
 print(bin(n).count('1'))
 
 # or Without using bin function
+
 binary = []
 while n > 0:
     remainder = n % 2

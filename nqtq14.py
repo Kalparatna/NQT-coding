@@ -1,5 +1,5 @@
 '''
-Given two numbers M and N. The task is to find the position of rightmost different bit in binary representation of numbers.
+Given two numbers M and N. The task is to find the position of rightmost different bit 1) in binary representation of numbers.
 
 Input:
 
@@ -31,17 +31,18 @@ Output:
 '''
 
 def righ_most_bit(M, N):
-    xor_op = M ^ N
-    position = 1
+    xor_op = M ^ N  # XOR of M and N  or diffrence of binary 
+    position = 1     # Start counting positions from 1
     while xor_op > 0:
+        # Check if the rightmost bit is 1
         if xor_op & 1 == 1:
-            return position
+            return position  # Return the position of the rightmost different bit
         
+        # Shift the bits to the right to check the next bit
         xor_op >>= 1
-        position += 1
+        position += 1  # Increment the position for the next bit
     
-    return -1
-
+    return -1  
 
 M, N = map(int, input().split())
 

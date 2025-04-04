@@ -64,7 +64,8 @@ Second input: Accept value for R(Positive integer number)
 
 The output format for testing 
 
-The output should be a positive integer number or print the message (if any) given in the problem statement. (Check the output in Example 1, Example 2).
+The output should be a positive integer number or print the message (if any) given in the problem statement. 
+(Check the output in Example 1, Example 2).
 '''
 
 def sum_of_digits(n):
@@ -80,6 +81,5 @@ if R == 0:
 else:
     digit_sum = sum(int(digit) for digit in str(N))
     total_sum = digit_sum * R
-    result = sum_of_digits(total_sum)
-
-    print(result)
+   
+    print(total_sum)

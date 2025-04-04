@@ -1,5 +1,8 @@
 '''
-Airport security officials have confiscated several item of the passengers at the security check point. All the items have been dumped into a huge box (array). Each item possesses a certain amount of risk[0,1,2]. Here, the risk severity of the items represent an array[] of N number of integer values. The task here is to sort the items based on their levels of risk in the array. The risk values range from 0 to 2.
+Airport security officials have confiscated several item of the passengers at the security check point. 
+All the items have been dumped into a huge box (array). Each item possesses a certain amount of risk[0,1,2]. 
+Here, the risk severity of the items represent an array[] of N number of integer values. 
+The task here is to sort the items based on their levels of risk in the array. The risk values range from 0 to 2.
 
 Example :
 
@@ -28,5 +31,16 @@ Explanation:
 In the above example, the input is an array of size N consisting of only 0’s, 1’s and 2s. The output is a sorted array from 0 to 2 based on risk severity.
 '''
 n = int(input())
-arr = list(map(int, input().split()))
+arr = [int(input()) for _ in range(n)] 
 print(*sorted(arr))
+
+# with Bubble sort
+n = int(input())  
+arr = [int(input()) for _ in range(n)] 
+
+for i in range(n - 1):  
+    for j in range(n - i - 1):  
+        if arr[j] > arr[j + 1]:  
+            arr[j], arr[j + 1] = arr[j + 1], arr[j]  
+
+print(*arr) 

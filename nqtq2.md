@@ -31,7 +31,6 @@ converted= bin(n)   #convert to binary
 
 binary = converted[2:]
 
-
 toggled = ""
 for i in binary:
     if i == "0":

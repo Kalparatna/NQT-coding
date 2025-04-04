@@ -26,7 +26,7 @@ Array = list(map(int, input().split()))
 K =  int(input())
 
 K = K % N
-before = Array[:-K]
-after = Array[-K:]
+before = Array[:-K]    #-K: Last K element
+after = Array[-K:]    #-K: From Kth element from last
 Array = after + before
 print(Array)
