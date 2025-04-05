@@ -15,3 +15,18 @@ Case 3
 Input: 9834698765123
 Expected Output: 1
 '''
+
+def sum_odd_even(num):
+    odd = 0
+    even = 0
+    for i in range(len(num)):
+        digit = int(num[i])
+        if i+1 % 2 == 0:
+            even += digit
+        else:
+            odd += digit
+    return abs(odd-even)
+
+num = input().strip()
+print(sum_odd_even(num))
+            
