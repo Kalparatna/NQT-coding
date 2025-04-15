@@ -17,3 +17,4 @@ while t > 0:
     print(fact(n))  
     t -= 1
 
+#https://www.codechef.com/practice/course/tcs-nqt-questions/TCSNQTC/problems/TCSNQTCP03
