@@ -15,7 +15,10 @@ str2 = "silent"
 
 Output: 
 Anagrams
-
-
-
 '''
+str1, str2 = map(str, input().split())
+
+if sorted(str1) == sorted(str2):
+    print("Anagram")
+else:
+    print("Not Anagram")
