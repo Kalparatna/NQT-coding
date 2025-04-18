@@ -28,13 +28,10 @@ Good Number
 
 T = int(input())
 
-for i in range(T):
+for _ in range(T):  
     n = int(input())
 
-    str_n = str(n)
-    sum_n = 0
-    for i in str_n:
-        sum_n += int(i)
+    sum_n = sum(int(digit) for digit in str(n))  
 
     if n % sum_n == 0:
         print("Good Number")
