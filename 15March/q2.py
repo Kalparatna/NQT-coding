@@ -1,6 +1,6 @@
 '''
 Problem Statement: Making Triplets Equal
-You are given a triplet of integers (a,b,c)(a, b, c). You can perform the following operation any
+You are given a triplet of integers (a,b,c). You can perform the following operation any
 number of times:
 1. Select any two numbers from the triplet.
 2. Add 1 to both selected numbers.
@@ -8,8 +8,8 @@ number of times:
 Your task is to determine whether it is possible to make all three numbers equal using the
 given operations.
 Input:
-. A single integer TT representing the number of test cases.
-. Each test case consists of three integers a,b,ca, b, c.
+. A single integer T representing the number of test cases.
+. Each test case consists of three integers a,b,c.
 Output:
 . For each test case, print "YES" if it is possible to make all three numbers equal; otherwise,
 print "NO".
