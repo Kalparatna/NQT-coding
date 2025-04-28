@@ -25,9 +25,7 @@ Example 2:
 '''
 
 n = int(input())
-
 nums = list(map(int,input().split()))
-
 print(sum(nums)- sum(set(nums)))
 
 #Or
@@ -37,3 +35,26 @@ result = 0
 for num in nums:
     result ^= num
 print(result)
+
+
+#Other Approach
+# In Case where more than 2 Numbers are same
+
+n = int(input())
+nums = list(map(int, input().split()))
+
+#Create a manual dictionary-like structure
+frequency = {}
+
+# Count the occurrences of each number
+for num in nums:
+    if num in frequency:
+        frequency[num] += 1
+    else:
+        frequency[num] = 1
+
+#Finding the unique element
+for num in nums:
+    if frequency[num] == 1:
+        print(num)
+        break
