@@ -26,7 +26,7 @@ Example 2:
 
 n = int(input())
 nums = list(map(int,input().split()))
-print(sum(nums)- sum(set(nums)))
+print(2 * sum(set(nums))- sum(nums))
 
 #Or
 n = int(input())
@@ -53,8 +53,10 @@ for num in nums:
     else:
         frequency[num] = 1
 
+res = []
 #Finding the unique element
 for num in nums:
     if frequency[num] == 1:
-        print(num)
-        break
+        res.append(num)
+
+print(*res)
