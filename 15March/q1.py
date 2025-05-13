@@ -16,7 +16,7 @@ Example Input:
 3
 0 3
 2 6 
-10 1001
+10 20
 Example Output:
 6 20 invalid input i&j i <= j<10000
 Explanation:
@@ -25,23 +25,31 @@ Explanation:
 3. Sum from 10 to 20: 10+11+ ... +20=165
 
 '''
-
-def sum_of_range(i, j):
-    if i >= j or j > 9999:
+def rangesum(i, j):
+    if i <= j<10000:     
+        res = 0
+        for num in range(i, j+1):
+            res += num
+        return res
+    else:
         return "invalid input i&j i <= j<10000"
-    
-    result = 0
-    for num in range(i, j + 1):
-        result += num
-    
-    return result
 
 T = int(input())
-res = []
+for i in range(T):
+    i, j =  map(int, input().split())
+    print(rangesum(i, j))
 
+
+#without using loop
+def sumrange(i, j):
+    if i <= j < 10000:
+        return ((j - i + 1) * (i + j)) // 2
+    else:
+        return "invalid input i&j i <= j<10000"
+
+T = int(input())
 for _ in range(T):
     i, j = map(int, input().split())
-    res.append(sum_of_range(i, j))
+    print(sumrange(i, j))
 
-print(*res)
-
+    
