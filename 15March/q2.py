@@ -53,12 +53,8 @@ def min_steps_to_equal(P, Q, R):
             return -1
 
 T = int(input())  
-res = []
 for _ in range(T):
+    res = 0
     P, Q, R = map(int, input().split())
-    res.append((min_steps_to_equal(P, Q, R)))
-
-for i in res:
-    print(i)
-
+    print(min_steps_to_equal(P, Q, R))
         
