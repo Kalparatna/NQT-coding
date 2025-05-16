@@ -18,19 +18,18 @@ Explanation: 2 is the only prime number between 2 and 2.
 
 '''
 
-
-def is_prime(n):
-    if n <= 1:
+def isPrime(num):
+    if num < 2:
         return False
-    for i in range(2, int(n**0.5) +1):
-        if n % i ==0:
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
             return False
     return True
 
-n = int(input())
-result = 0
-for i in range(2, n+1):
-    if is_prime(i):
-        result += i
+num = int(input())
+primesum = 0
+for i in range(2, num + 1):
+    if isPrime(i):
+        primesum += i
 
-print(result)
+print(primesum)
