@@ -24,9 +24,11 @@ Example 2:
 
 '''
 
+
 n = int(input())
-nums = list(map(int,input().split()))
-print(2 * sum(set(nums))- sum(nums))
+nums = list(map(int, input().split()))
+print(sum(nums)-sum(set(nums)))
+
 
 #Or
 n = int(input())
