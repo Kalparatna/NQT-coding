@@ -31,6 +31,39 @@ Output:
 0 1
 
 '''
+#without inbuilt Funcitons
+def smaller_sufficient_team(req_skills, people):
+    # Convert required skills to a list and map each skill to an index
+    skill_index = {skill: i for i, skill in enumerate(req_skills)}
+    total_skills = len(req_skills)
+    n = len(people)
+
+    # Convert each person's skill set to a bitmask
+    people_masks = []
+    for person in people:
+        mask = 0
+        for skill in person:
+            if skill in skill_index:
+                mask |= 1 << skill_index[skill]
+        people_masks.append(mask)
+
+    # Initialize DP table, key: skill_mask, value: list of people indices
+    dp = {0: []}
+
+    for i in range(n):
+        person_mask = people_masks[i]
+        # We make a copy of current dp keys to avoid modifying while iterating
+        new_dp = dict(dp)
+        for skill_mask in dp:
+            combined = skill_mask | person_mask
+            if combined not in new_dp or len(dp[skill_mask]) + 1 < len(new_dp[combined]):
+                new_dp[combined] = dp[skill_mask] + [i]
+        dp = new_dp
+
+    full_mask = (1 << total_skills) - 1
+    return dp[full_mask]
+
+
 
 def smaller_sufficient_team(req_skills, people):
     from itertools import combinations
