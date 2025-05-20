@@ -2,13 +2,7 @@
 Q2)Question: Standard Deviation of an Array
 
 Problem Statement:
-Write a C program to calculate the standard deviation of a given array of integers.The formula for standard deviation is
-Your program should:
-Read an integer n representing the number of elements in the array.
-Read n integers.
-Calculate the mean of the array.
-Use the mean to compute the standard deviation.
-Print the standard deviation rounded to 2 decimal places.
+Write a program to calculate the standard deviation of a given array of integers.The formula for standard deviation is
 Your program should:
 Read an integer n representing the number of elements in the array.
 Read n integers.
@@ -34,6 +28,6 @@ temp = 0
 for i in range(n):
     temp += (nums[i] - mean) ** 2
 
-sd = (temp / n) ** 0.5  
+variance = (temp / n)
+sd = variance ** 0.5  
 print(sd)
-
