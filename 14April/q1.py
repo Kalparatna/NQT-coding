@@ -16,32 +16,37 @@ str2 = "silent"
 Output: 
 Anagrams
 '''
-str1, str2 = map(str, input().split())
+
+
+def isAnagram(str1, str2):
+    if len(str1)!=len(str2):
+        return False
+    
+    fre1 = {}
+    fre2 = {}
+
+    for i in str1:
+        fre1[i] = fre1.get(i, 0)+1
+
+    for i in str2:
+        fre2[i] = fre2.get(i, 0)+1
+
+    return fre1 == fre2
+
+str1 = input()
+str2 = input()
+if isAnagram(str1, str2):
+    print("Anagram")
+else:
+    print("Not Anagram")
+
+# Or 
+
+str1 = input()
+str2 = input()
 
 if sorted(str1) == sorted(str2):
     print("Anagram")
 else:
     print("Not Anagram")
 
-#Without sorted Funtion
-
-def is_anagram(str1, str2):
-    if len(str1) != len(str2):
-        return False
-       
-    fre1= {}
-    fre2 ={}
-
-    for i in str1:
-        fre1[i] = fre1.get(i, 0) + 1
-
-    for i in str2:
-        fre2[i] = fre2.get(i, 0) + 1
-    
-    return fre1 == fre2
-
-str1, str2 = map(str(input()).split())
-if is_anagram(str1, str2):
-    print("Anagram")
-else:
-    print("not Anagram")
