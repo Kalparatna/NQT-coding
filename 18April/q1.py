@@ -1,6 +1,5 @@
 '''
 Question: Find Common Height Difference or Detect Invalid Input
-Find Common Height Difference or Detect Invalid Input
 Given the height of a tree for 4 consecutive weeks, calculate the difference between each week.
 If any height is negative, return "Not valid inputs".
 If any two weekly differences are the same, return that difference.
@@ -42,6 +41,27 @@ Explanation: Negative height is invalid.
 
 
 '''
+h = list(map(int, input().split()))
+
+if any(i < 0 for i in h):
+    print("Not valid inputs")
+else:
+
+    d1 = h[1] - h[0]
+    d2 = h[2] - h[1]
+    d3 = h[3] - h[2]
+
+    if d1 == d2 == d3:
+        print(d1)
+    elif d1 == d2 or d1 == d3:
+        print(d1)
+    elif d2 == d3:
+        print(d2)
+    else:
+        print("None")
+
+
+#Or  where weeks sized is less or more than 4
 heights = list(map(int, input().split()))
 
 if any(num < 0 for num in heights):
@@ -63,5 +83,4 @@ else:
         print(comm_diff)
     else:
         print("None")
-
 
