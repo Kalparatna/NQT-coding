@@ -7,35 +7,21 @@ Given a column number, find its corresponding Excel column name. The following a
 Input
 
 26
-
 51
-
 52
-
 80
-
 676
-
 702
-
 705
 
-Output
 
 Output
-
 Z
-
 AY
-
 AZ
-
 CB
-
 YZ
-
 ZZ
-
 AAC
 '''
 

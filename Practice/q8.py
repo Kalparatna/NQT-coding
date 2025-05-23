@@ -64,3 +64,5 @@ for _ in range(T):
         left_sum += nums[i]
     else:
         print(-1)
+
+#https://www.codechef.com/practice/course/tcs-nqt-questions/TCSNQTC/problems/TCSNQTCP10
