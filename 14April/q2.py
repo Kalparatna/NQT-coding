@@ -34,4 +34,3 @@ sd = variance ** 0.5
 # Print with 2 decimal places
 print(f"{sd:.2f}")
 
-
