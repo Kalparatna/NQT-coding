@@ -15,7 +15,7 @@ Input:
 Output:
 1
 Explanation:
-21 - 1 = 1 move
+2^1 - 1 = 1 move
 
 Test Case 2:
 Input:
@@ -23,7 +23,7 @@ Input:
 Output:
 3
 Explanation:
-22 - 1 = 3 moves
+2^2 - 1 = 3 moves
 
 
 '''
