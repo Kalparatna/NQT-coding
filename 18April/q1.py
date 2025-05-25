@@ -61,7 +61,7 @@ else:
         print("None")
 
 
-#Or  where weeks sized is less or more than 4
+#Or 
 heights = list(map(int, input().split()))
 
 if any(num < 0 for num in heights):
