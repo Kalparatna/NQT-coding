@@ -43,6 +43,28 @@ Output:
 110 120 130 140 150
 
 '''
+
+def rev(arr):
+    return arr[::-1]
+
+T = int(input())
+for i in range(T):
+    m, n = map(int, input().split())
+    matrix = []
+    for row in range(m):
+        
+        row = list(map(int, input().split()))
+        matrix.append(row)
+
+    for row in range(m):
+        if row % 2 == 0:
+            print(*matrix[row])
+            
+        else:
+            print(*rev(matrix[row]))
+
+#or
+
 T = int(input())
 for i in range(T):
     rows, cols = map(int, input().split())
